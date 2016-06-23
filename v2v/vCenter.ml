@@ -99,7 +99,7 @@ let get_session_cookie password scheme uri sslverify url =
 
     if status = "404" then (
       dump_response stderr;
-      error (f_"vcenter: URL not found: %s\n\nThe '--dcpath' parameter may be useful.  See the explanation in the virt-v2v(1) man page OPTIONS section.") url
+      error (f_"vcenter: URL not found: %s") url
     );
 
     if status <> "200" then (
